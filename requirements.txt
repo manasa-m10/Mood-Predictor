@@ -6,3 +6,5 @@ pandas
 numpy
 transformers
 datasets
+requests
+torch
