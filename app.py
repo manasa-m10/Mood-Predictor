@@ -15,7 +15,7 @@ import joblib
 import numpy as np
 
 # Load model and tokenizer
-model_path = "/content/drive/MyDrive/archive/mood_classifier"
+model_path = "mood_classifier"
 model = BertForSequenceClassification.from_pretrained(model_path)
 tokenizer = BertTokenizer.from_pretrained(model_path)
 le = joblib.load(f"{model_path}/label_encoder.pkl")

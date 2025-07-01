@@ -1,17 +1,2 @@
-Steps to run app.py
-
-1 - Connect to drive (the file path)
-
-2 - Run below python script
-from pyngrok import ngrok
-
-# Replace YOUR_AUTH_TOKEN with your actual token
-ngrok.set_auth_token("YOUR_AUTH_TOKEN")
-
-# Then open tunnel to 8000
-public_url = ngrok.connect(8000)
-print("Public URL:", public_url)
-
-3 - !uvicorn app:app --host 0.0.0.0 --port 8000 --reload
-
-Run the ngrok generated url(not localhost since it wont work on colab)
+fastapi
+uvicorn
