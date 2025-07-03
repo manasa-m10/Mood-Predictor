@@ -27,6 +27,10 @@ app = FastAPI()
 class TextInput(BaseModel):
     text: str
 
+@app.get("/")
+def read_root():
+    return {"message": "Hello from FastAPI in Colab!"}
+
 @app.post("/moodpredictor")
 def predict_mood(data: TextInput):
     inputs = tokenizer(data.text, return_tensors="pt", truncation=True, padding=True)
